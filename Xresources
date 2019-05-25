@@ -1,0 +1,30 @@
+URxvt.multichar_encoding:    utf-8
+URxvt.inputMethod:   fcitx
+
+URxvt.depth:          32
+
+URxvt.shading:        15
+
+URxvt.background:     black
+URxvt.foreground:     white
+
+URxvt.colorBD:Gray95
+URxvt.colorUL:Green
+URxvt.color1:Red2
+URxvt.color4:RoyalBlue
+URxvt.color5:Magenta2
+URxvt.color8:Gray50
+URxvt.color10:Green2
+URxvt.color12:DodgerBlue
+URxvt.color14:Cyan2
+URxvt.color15:Gray95
+
+Xft.dpi: 96
+
+URxvt.font:           xft:Monaco:size=12:antialias=true,xft:文泉驿等宽微米黑:size=12:antialias=true
+URxvt.boldFont:       xft:Monaco:size=12:Bold:antialias=true,xft:文泉驿等宽微米黑:size=12:Bold:antialias=true
+URxvt.italicFont:     xft:Monaco:size=12:Italic:antialias=true,xft:文泉驿等宽微米黑:size=12:Italic:antialias=true
+URxvt.boldItalicFont: xft:Monaco:size=12:Bold Italic:antialias=true,xft:文泉驿等宽微米黑:size=12:Bold Italic:antialias=true
+
+
+URxvt.scrollBar: False
