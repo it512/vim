@@ -27,7 +27,7 @@ Plug 'airblade/vim-gitgutter'
 
 "Plug 'cespare/vim-toml'
 
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -56,18 +56,8 @@ let g:go_highlight_types = 1
 let g:go_auto_type_info = 1
 
 let g:mapleader=","
-"autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
 
-" ------------------- python
 
-"python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF

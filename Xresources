@@ -28,3 +28,6 @@ URxvt.boldItalicFont: xft:Monaco:size=12:Bold Italic:antialias=true,xft:文泉�
 
 
 URxvt.scrollBar: False
+
+# Cascadia
+# Monaco
