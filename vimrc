@@ -2,10 +2,8 @@ set nocompatible
 
 call plug#begin()
 
-Plug 'junegunn/vim-plug'
-
 Plug 'fatih/vim-go'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
 
 Plug 'vim-airline/vim-airline'
@@ -16,18 +14,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/DrawIt'
 Plug 'Yggdroot/vim-mark'
 
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-"Plug 'leafgarland/typescript-vim'
+Plug 'ervandew/SuperTab'
 
-"git
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
-
-"Plug 'cespare/vim-toml'
-
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -39,14 +31,13 @@ set list lcs=tab:\|\
 set incsearch
 set wildmode=longest,list,full
 
-"set cursorline
+set cursorline
 
 filetype plugin indent on
 syn on
 
-"colorscheme distinguished
-colorscheme koehler
-"colorscheme Tomorrow-Night
+colorscheme distinguished
+"colorscheme koehler
 
 let g:go_fmt_command='goimports'
 let g:go_highlight_functions = 1
@@ -59,5 +50,3 @@ let g:mapleader=","
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
-
-
