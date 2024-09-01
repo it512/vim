@@ -4,7 +4,7 @@ call plug#begin()
 
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
-Plug 'liuchengxu/vista.vim'
+"Plug 'liuchengxu/vista.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -39,12 +39,13 @@ Plug 'dense-analysis/ale'
 Plug 'puremourning/vimspector'
 
 Plug 'jparise/vim-graphql'
+" Plug 'tsandall/vim-rego'
 
 " game
 Plug 'vim/killersheep'
 
 
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -74,7 +75,7 @@ syn on
 " -------------------- color
 "  Available values:   `'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`, `'espresso'`
 let g:sonokai_style = 'default'
-"let g:sonokai_diagnostic_line_highlight = 1
+let g:sonokai_diagnostic_line_highlight = 1
 let g:sonokai_enable_italic = 1
 let g:airline_theme = 'sonokai'
 let g:sonokai_better_performance = 1
@@ -105,14 +106,14 @@ let g:Lf_ShortcutF = '<C-P>'
 " ale
 let g:ale_fixers = {
 \ 'rust': ['rustfmt','remove_trailing_lines','trim_whitespace'],
-\ 'python': ['yapf', 'isort', 'autoflake', 'autoimport','remove_trailing_lines','trim_whitespace','add_blank_lines_for_python_control_statements'],
-\ 'go': ['goimports','gofmt','gopls', 'remove_trailing_lines','trim_whitespace'],
+\ 'python': ['black', 'isort', 'autoflake', 'autoimport','remove_trailing_lines','trim_whitespace','add_blank_lines_for_python_control_statements'],
+\ 'go': ['gopls', 'goimports', 'gofmt', 'remove_trailing_lines','trim_whitespace'],
 \}
 
 let g:ale_linters = {
 \ 'rust': ['analyzer', 'cargo'],
-\ 'python': ['flake8','mypy','pyright'],
-\ 'go': ['gopls','govte','staticcheck'],
+\ 'python': ['flake8','mypy','pyright', 'pycodestyle'],
+\ 'go': ['gopls', 'golangci-lint', 'staticcheck'],
 \ }
 
 let g:ale_sign_column_always = 1
@@ -126,6 +127,8 @@ let g:ale_completion_autoimport = 1
 
 let g:ale_set_balloons = 1
 let g:ale_hover_to_floating_preview = 1
+
+let g:ale_lsp_suggestions = 1
 
 let g:airline#extensions#ale#enabled = 1
 "let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
